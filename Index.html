@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NEXORA AI - Video Clipper</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #080b14;
+  color: white;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+}
+
+header {
+  padding: 25px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #22283a;
+}
+
+.logo {
+  font-size: 27px;
+  font-weight: bold;
+  color: #9b7cff;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.hero {
+  text-align: center;
+  padding: 100px 20px 50px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero h1 span {
+  color: #9b7cff;
+}
+
+.hero p {
+  color: #a5a8b5;
+  font-size: 17px;
+}
+
+.box {
+  max-width: 650px;
+  margin: 35px auto;
+  padding: 30px;
+  background: #131827;
+  border: 1px solid #30364b;
+  border-radius: 18px;
+}
+
+input, select {
+  width: 100%;
+  padding: 16px;
+  margin: 12px 0;
+  background: #080b14;
+  border: 1px solid #414861;
+  border-radius: 9px;
+  color: white;
+  font-size: 15px;
+}
+
+button {
+  width: 100%;
+  padding: 16px;
+  margin-top: 15px;
+  background: #865cff;
+  color: white;
+  border: none;
+  border-radius: 9px;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+button:active {
+  background: #6840d9;
+}
+
+#message {
+  margin-top: 20px;
+  color: #b8a4ff;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 40px;
+  color: #777;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">NEXORA AI</div>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#clipper">Clipper</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Turn Long Videos Into <span>Viral Clips</span></h1>
+  <p>AI-powered video clipping. Create short-form content easily.</p>
+
+  <div class="box" id="clipper">
+    <h2>AI Video Clipper</h2>
+
+    <input type="url" id="video"
+    placeholder="Paste your video URL here">
+
+    <select id="duration">
+      <option value="30">30 Seconds</option>
+      <option value="45">45 Seconds</option>
+      <option value="60">60 Seconds</option>
+    </select>
+
+    <button onclick="generateClips()">
+      Generate AI Clips →
+    </button>
+
+    <div id="message"></div>
+  </div>
+</section>
+
+<footer>
+  © 2026 NEXORA AI. All rights reserved.
+</footer>
+
+<script>
+function generateClips() {
+  const video = document.getElementById("video").value;
+  const message = document.getElementById("message");
+
+  if (!video) {
+    message.innerText = "Please enter a video URL first.";
+    return;
+  }
+
+  message.innerText =
+    "Interface ready! Connect an AI video processing backend to generate clips.";
+}
+</script>
+
+</body>
+</html>
